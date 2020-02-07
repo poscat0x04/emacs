@@ -154,6 +154,7 @@
 (require 'init-haskell)
 ;(require 'init-agda)
 (require 'init-coq)
+(require 'init-idris)
 
 (provide 'init-dev)
 
