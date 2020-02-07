@@ -7,9 +7,14 @@
 
 (require 'package)
 (add-to-list 'package-archives
-	           '("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))
+             '("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))
 
 (package-initialize)
+
+;; Bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 (require 'use-package)
 
@@ -25,6 +30,10 @@
       (goto-char (point-max))
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
+
+(straight-use-package 'exec-path-from-shell)
+(use-package exec-path-from-shell
+  :init (exec-path-from-shell-initialize))
 
 (setq debug-on-error t)
 

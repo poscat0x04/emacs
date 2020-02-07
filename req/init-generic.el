@@ -60,8 +60,7 @@
 (setq-default tab-width 4)
 
 ;; font
-(set-face-attribute 'default nil :height 120)
-(set-face-attribute 'default nil :font "consolas")
+(set-face-attribute 'default nil :font "Inconsolata-16")
 
 ;; Prefer shorter names
 (fset 'yes-or-no-p 'y-or-n-p)

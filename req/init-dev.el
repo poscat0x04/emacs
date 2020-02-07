@@ -152,7 +152,7 @@
 
 (require 'init-rust)
 (require 'init-haskell)
-(require 'init-agda)
+;(require 'init-agda)
 (require 'init-coq)
 
 (provide 'init-dev)
