@@ -9,3 +9,4 @@ uses company for autocomplete
 | Rust     | rust-mode          | lsp-mode     |
 | Agda     | agda2-mode         | nil          |
 | Coq      | proof-general      | company-coq  |
+| Idris    | idris-mode         | idris-mode   |
