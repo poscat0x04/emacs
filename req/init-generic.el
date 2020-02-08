@@ -112,7 +112,7 @@
 
 ;; Try out emacs package without installing
 (use-package try
-  :ensure t)
+  :straight t)
 
 
 (provide 'init-generic)

@@ -5,7 +5,7 @@
 
 ;;; Code:
 (use-package haskell-mode
-  :ensure t
+  :straight t
   :init
   (unless (fboundp 'align-rules-list)
     (defvar align-rules-list nil))
@@ -50,10 +50,11 @@
     (inhibit-startup-screen                       t))
 
 (use-package lsp-haskell
-  :ensure t
+  :straight t
   :hook (haskell-mode . lsp)
   :custom
-  (lsp-haskell-process-path-hie "hie-wrapper"))
+  (lsp-haskell-process-path-hie "ghcide")
+  (lsp-haskell-process-args-hie '()))
 
 (straight-use-package 'haskell-snippets)
 

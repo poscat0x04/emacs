@@ -7,7 +7,7 @@
 
 ;; The awesome git client
 (use-package magit
-  :ensure t
+  :straight t
   :bind (("C-x g" . magit-status))
   :config
   (setq magit-status-margin
@@ -16,7 +16,7 @@
 
 ;; highlight uncommitted changes using git
 (use-package diff-hl
-  :ensure t
+  :straight t
   :hook ((prog-mode . (lambda ()
                         (diff-hl-mode)
                         (diff-hl-flydiff-mode)
@@ -25,11 +25,11 @@
 
 ;; Git related modes
 (use-package gitattributes-mode
-  :ensure t)
+  :straight t)
 (use-package gitconfig-mode
-  :ensure t)
+  :straight t)
 (use-package gitignore-mode
-  :ensure t)
+  :straight t)
 
 (provide 'init-git)
 

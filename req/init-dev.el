@@ -21,7 +21,7 @@
 
 ;; highlight TODO
 (use-package hl-todo
-  :ensure t
+  :straight t
   :bind (:map hl-todo-mode-map
               ([C-f3] . hl-todo-occur)
               ("C-c t p" . hl-todo-previous)
@@ -43,12 +43,12 @@
 
 ;; quickrun codes, including cpp. awesome!
 (use-package quickrun
-  :ensure t
+  :straight t
   :bind (("C-c x" . quickrun)))
 
 ;; A tree layout file explorer
 (use-package treemacs
-  :ensure t
+  :straight t
   :commands (treemacs-follow-mode
              treemacs-filewatch-mode
              treemacs-fringe-indicator-mode
@@ -79,7 +79,7 @@
 
 ;; project management
 (use-package projectile
-  :ensure t
+  :straight t
   :bind (:map projectile-mode-map
          ("C-c p" . projectile-command-map))
   :hook (prog-mode . projectile-mode)
@@ -90,7 +90,7 @@
   :config
   ;; project side rg
   (use-package ripgrep
-    :ensure t)
+    :straight t)
 
   ;; cmake project build
   (projectile-register-project-type 'cmake '("CMakeLists.txt")
@@ -109,23 +109,23 @@
   )
 
 (use-package treemacs-evil
-  :ensure t
+  :straight t
   :after treemacs evil
   :config
   (evil-define-key 'treemacs treemacs-mode-map (kbd "l") 'treemacs-RET-action)
   (evil-define-key 'treemacs treemacs-mode-map (kbd "h") 'treemacs-TAB-action))
 
 (use-package treemacs-projectile
-  :ensure t
+  :straight t
   :after treemacs projectile)
 
 (use-package treemacs-magit
-  :ensure t
+  :straight t
   :after treemacs magit)
 
 ;; lint tool
 (use-package flycheck
-  :ensure t
+  :straight t
   :diminish " FC"
   :hook (prog-mode . flycheck-mode)
   :config
@@ -135,7 +135,7 @@
 
 ;; xref
 (use-package ivy-xref
-  :ensure t
+  :straight t
   :init
   ;; xref initialization is different in Emacs 27 - there are two different
   ;; variables which can be set rather than just one
