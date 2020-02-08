@@ -1,11 +1,11 @@
 
 ;;; Code:
 
-(straight-use-package 'proof-general)
-(use-package proof-general)
+(use-package proof-general
+  :straight t)
 
-(straight-use-package 'company-coq)
 (use-package company-coq
+  :straight t
   :ensure nil
   :hook (coq-mode . company-coq-mode)
   :custom

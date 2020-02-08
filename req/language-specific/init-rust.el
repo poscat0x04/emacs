@@ -6,16 +6,16 @@
 ;;; Code:
 
 (use-package rust-mode
-  :ensure t
+  :straight t
   :init (setq rust-format-on-save t))
 
 (use-package cargo
-  :ensure t
+  :straight t
   :diminish cargo-minor-mode
   :hook (rust-mode . cargo-minor-mode))
 
 (use-package flycheck-rust
-  :ensure t
+  :straight t
   :config
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
   (add-hook 'rust-mode-hook 'flycheck-mode))

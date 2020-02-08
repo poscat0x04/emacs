@@ -6,19 +6,19 @@
 ;;; Code:
 
 (use-package all-the-icons
-  :ensure t)
+  :straight t)
 
 (use-package doom-themes
-  :ensure t
+  :straight t
   :config
   (load-theme 'doom-one t))
 
 (use-package doom-modeline
-  :ensure t
+  :straight t
   :hook (after-init . doom-modeline-mode))
 
 (use-package golden-ratio
-  :ensure t
+  :straight t
   :hook (after-init . golden-ratio-mode)
   :custom (golden-ratio-auto-scale t))
 
