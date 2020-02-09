@@ -26,7 +26,7 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-(setq debug-on-error t)
+(setq debug-on-error nil)
 
 (add-to-list 'load-path (expand-file-name "req/language-specific" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "req" user-emacs-directory))
