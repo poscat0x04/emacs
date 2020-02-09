@@ -155,6 +155,7 @@
 (require 'init-agda)
 (require 'init-coq)
 (require 'init-idris)
+(require 'init-purs)
 
 (provide 'init-dev)
 
