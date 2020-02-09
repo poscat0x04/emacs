@@ -37,7 +37,7 @@
          ("C-c C-c" . haskell-compile)
          ("C-`"     . haskell-interactive-mode-collapse))
   :custom
-    (haskell-compile-cabal-build-command "stack build --profile --ghc-options=-Wall")
+    (haskell-compile-cabal-build-command "stack build --ghc-options=-Wall")
     (haskell-compile-command "ghc -dynamic -Wall -ferror-spans -fforce-recomp -c %s")
     (haskell-indentation-layout-offset            4)
     (haskell-indentation-left-offset              4)
@@ -53,8 +53,7 @@
   :straight t
   :hook (haskell-mode . lsp)
   :custom
-  (lsp-haskell-process-path-hie "ghcide")
-  (lsp-haskell-process-args-hie '()))
+  (lsp-haskell-process-path-hie "hie-wrapper"))
 
 (straight-use-package 'haskell-snippets)
 
