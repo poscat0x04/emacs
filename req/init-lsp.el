@@ -64,6 +64,11 @@
               ("C-c r" . lsp-rename))
   )
 
+;; lsp-ui
+(use-package lsp-ui
+  :straight t
+  :hook (lsp-mode . lsp-ui-mode))
+
 
 (provide 'init-lsp)
 
