@@ -150,6 +150,14 @@
 
 (straight-use-package 'pkgbuild-mode)
 
+(use-package rainbow-delimiters
+  :straight t
+  :hook
+  (emacs-lisp-mode . rainbow-delimiters-mode)
+  (haskell-mode    . rainbow-delimiters-mode)
+  (purescript-mode . rainbow-delimiters-mode)
+  (idris-mode      . rainbow-delimiters-mode))
+
 (require 'init-rust)
 (require 'init-haskell)
 (require 'init-agda)
