@@ -3,14 +3,15 @@
 heavily inspired by condy's config  
 uses company for autocomplete
 
-| Language   | Major Mode Package | Autocomplete  |
-|------------|--------------------|---------------|
-| Haskell    | haskell-mode       | lsp-haskell   |
-| Rust       | rust-mode          | lsp-mode      |
-| Agda       | agda2-mode         | nil           |
-| Coq        | proof-general      | company-coq   |
-| Idris      | idris-mode         | idris-mode    |
-| Purescript | purescript-mode    | psc-ide-emacs |
+| Language   | Major Mode Package | Autocomplete   |
+|------------|--------------------|----------------|
+| Haskell    | haskell-mode       | lsp-haskell    |
+| Rust       | rust-mode          | lsp-mode       |
+| Agda       | agda2-mode         | nil            |
+| Coq        | proof-general      | company-coq    |
+| Idris      | idris-mode         | idris-mode     |
+| Purescript | purescript-mode    | psc-ide-emacs  |
+| LaTeX      | auctex             | company-auctex |
 
 ## installation
 
@@ -29,3 +30,5 @@ clone into `~/.emacs.d` open emacs and run `M-x all-the-icons-install-font`
 | coq        | backend of proofgeneral                   |
 | idris      | completion backend for idris              |
 | agda       | agda2-mode and it's backend               |
+| texlive    | latex preview and compilation             |
+| aspell     | spelling check                            |

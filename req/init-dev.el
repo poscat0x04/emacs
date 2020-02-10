@@ -127,7 +127,9 @@
 (use-package flycheck
   :straight t
   :diminish " FC"
-  :hook (prog-mode . flycheck-mode)
+  :hook
+  (prog-mode . flycheck-mode)
+  (text-mode . flycheck-mode)
   :config
   (setq flycheck-indication-mode 'right-fringe)
   (setq-default flycheck-disabled-checkers '(c/c++-clang c/c++-cppcheck c/c++-gcc))
@@ -165,6 +167,7 @@
 (require 'init-idris)
 (require 'init-purs)
 (require 'init-latex)
+(require 'init-nat)
 
 (provide 'init-dev)
 
