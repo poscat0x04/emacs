@@ -164,6 +164,7 @@
 (require 'init-coq)
 (require 'init-idris)
 (require 'init-purs)
+(require 'init-latex)
 
 (provide 'init-dev)
 
