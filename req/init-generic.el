@@ -4,7 +4,6 @@
 ;;
 
 ;;; Code:
-
 ;; Supress GUI features
 (setq use-file-dialog nil
       use-dialog-box nil
@@ -114,6 +113,14 @@
 ;; Try out emacs package without installing
 (use-package try
   :straight t)
+
+;; Browser
+(defun browse-url-chromium-incognito (url &optional new-window)
+  "open url in chromium with incognito mode"
+  (shell-command
+     (concat "chromium --incognito --app=" url)))
+
+(setq browse-url-browser-function 'browse-url-chromium-incognito)
 
 
 (provide 'init-generic)
