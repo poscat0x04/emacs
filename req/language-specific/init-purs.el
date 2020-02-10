@@ -13,8 +13,6 @@
   :hook
   (purescript-mode . (lambda ()
                        (psc-ide-mode)
-                       (company-mode)
-                       (flycheck-mode)
                        (turn-on-purescript-indentation))))
 
 (provide 'init-purs)
