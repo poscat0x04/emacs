@@ -19,16 +19,17 @@ clone into `~/.emacs.d` open emacs and run `M-x all-the-icons-install-font`
 
 ## System requirement
 
-| Package    | Reason                                    |
-|------------|-------------------------------------------|
-| gcc, cmake | used to compile libvterm                  |
-| hie        | lsp support for Haskell                   |
-| stack      | build tool for Haskell                    |
-| rust       | lsp support and build tool for Rust       |
-| purescript | completion backend for psc-ide            |
-| spago      | build tool for PureScript. Not mandatory. |
-| coq        | backend of proofgeneral                   |
-| idris      | completion backend for idris              |
-| agda       | agda2-mode and it's backend               |
-| texlive    | latex preview and compilation             |
-| aspell     | spelling check                            |
+| Package     | Reason                                    |
+|-------------|-------------------------------------------|
+| gcc, cmake  | compiling libvterm                        |
+| hie         | lsp support for Haskell                   |
+| stack       | build tool for Haskell                    |
+| rust        | lsp support and build tool for Rust       |
+| purescript  | completion backend for psc-ide            |
+| spago       | build tool for PureScript. Not mandatory. |
+| coq         | backend of proofgeneral                   |
+| idris       | completion backend for idris              |
+| agda        | agda2-mode and its backend                |
+| texlive     | latex previewing and compilation          |
+| aspell      | spelling checking                         |
+| python-grip | markdown and org previewing               |

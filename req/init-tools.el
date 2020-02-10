@@ -205,6 +205,13 @@
   (auto-compile-on-load-mode)
   (auto-compile-on-save-mode))
 
+;; grip-mode
+(use-package grip-mode
+  :straight t
+  :hook ((markdown-mode org-mode) . grip-mode)
+  :custom
+  (grip-preview-use-webkit t))
+
 (provide 'init-tools)
 
 ;;; init-tools.el ends here
