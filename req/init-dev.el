@@ -148,9 +148,12 @@
   ;; as well
   (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
+(straight-use-package 'toml-mode)
 (straight-use-package 'yaml-mode)
-
 (straight-use-package 'pkgbuild-mode)
+(use-package dhall-mode
+  :straight t
+  :mode "\\.dhall\\'")
 
 (use-package rainbow-delimiters
   :straight t
