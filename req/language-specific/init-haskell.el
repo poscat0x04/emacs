@@ -30,12 +30,9 @@
          ("C-c h" . hoogle)
          ("C-o"   . open-line)
          ("C-c C-c" . haskell-compile)
-         ("C-c C-t" . haskell-process-do-type)
-         ("C-c C-i" . haskell-process-do-info)
          :map haskell-cabal-mode-map
          ("C-c h" . hoogle)
-         ("C-c C-c" . haskell-compile)
-         ("C-`"     . haskell-interactive-mode-collapse))
+         ("C-c C-c" . haskell-compile))
   :custom
     (haskell-compile-cabal-build-command "stack build --ghc-options=-Wall")
     (haskell-compile-command "ghc -dynamic -Wall -ferror-spans -fforce-recomp -c %s")
@@ -46,7 +43,6 @@
     (haskell-process-log                          t)
     (haskell-process-suggest-hoogle-imports       t)
     (haskell-tags-on-save                         t)
-    (haskell-stylish-on-save                      t)
     (inhibit-startup-screen                       t))
 
 (use-package lsp-haskell
