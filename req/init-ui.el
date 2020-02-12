@@ -8,7 +8,7 @@
 (use-package doom-themes
   :straight t
   :config
-  (load-theme 'doom-one t)
+  (load-theme 'doom-nord t)
   (doom-themes-visual-bell-config)
   (setq doom-themes-treemacs-theme "doom-colors")
   (doom-themes-treemacs-config))
