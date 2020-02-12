@@ -5,13 +5,13 @@
 
 ;;; Code:
 
-(use-package all-the-icons
-  :straight t)
-
 (use-package doom-themes
   :straight t
   :config
-  (load-theme 'doom-one t))
+  (load-theme 'doom-one t)
+  (doom-themes-visual-bell-config)
+  (setq doom-themes-treemacs-theme "doom-colors")
+  (doom-themes-treemacs-config))
 
 (use-package doom-modeline
   :straight t
