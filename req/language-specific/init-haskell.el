@@ -6,6 +6,8 @@
 ;;; Code:
 (use-package haskell-mode
   :straight t
+  :hook
+  (haskel-mode . haskell-indentation-mode)
   :init
   (unless (fboundp 'align-rules-list)
     (defvar align-rules-list nil))
