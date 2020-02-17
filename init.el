@@ -41,6 +41,7 @@
 (require 'init-org)
 (require 'init-git)
 (require 'init-ui)
+(require 'init-snippet)
 (require 'init-startup)
 (require 'init-tools)
 (require 'init-dev)
