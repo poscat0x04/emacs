@@ -7,7 +7,7 @@
   :straight t
   :defer t
   :bind (:map yas-minor-mode-map
-              ("C-'" . yas-expand))
+              ("C-j" . yas-expand))
   :commands (yas-minor-mode)
   :hook ((prog-mode . yas-minor-mode))
   :config (yas-reload-all)
