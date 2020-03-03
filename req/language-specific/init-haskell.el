@@ -38,8 +38,6 @@
   :custom
     (haskell-compile-cabal-build-command "stack build --ghc-options=-Wall")
     (haskell-compile-command "ghc -dynamic -Wall -ferror-spans -fforce-recomp -c %s")
-    (haskell-indentation-layout-offset            4)
-    (haskell-indentation-left-offset              4)
     (haskell-process-suggest-haskell-docs-imports t)
     (haskell-process-suggest-remove-import-lines  t)
     (haskell-process-log                          t)
