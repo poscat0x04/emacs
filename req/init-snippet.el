@@ -1,10 +1,8 @@
 
 ;;; Code:
-(use-package yasnippet-snippets
-  :straight t)
+(use-package yasnippet-snippets)
 
 (use-package yasnippet
-  :straight t
   :defer t
   :bind (:map yas-minor-mode-map
               ("C-j" . yas-expand))

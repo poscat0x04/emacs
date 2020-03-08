@@ -21,7 +21,6 @@
 
 ;; highlight TODO
 (use-package hl-todo
-  :straight t
   :bind (:map hl-todo-mode-map
               ([C-f3] . hl-todo-occur)
               ("C-c t p" . hl-todo-previous)
@@ -43,12 +42,10 @@
 
 ;; quickrun codes, including cpp. awesome!
 (use-package quickrun
-  :straight t
   :bind (("C-c x" . quickrun)))
 
 ;; A tree layout file explorer
 (use-package treemacs
-  :straight t
   :commands (treemacs-follow-mode
              treemacs-filewatch-mode
              treemacs-fringe-indicator-mode
@@ -79,7 +76,6 @@
 
 ;; project management
 (use-package projectile
-  :straight t
   :bind (:map projectile-mode-map
          ("C-c p" . projectile-command-map))
   :hook (prog-mode . projectile-mode)
@@ -89,8 +85,7 @@
   (projectile-read-command nil) ;; no prompt in projectile-compile-project
   :config
   ;; project side rg
-  (use-package ripgrep
-    :straight t)
+  (use-package ripgrep)
 
   ;; cmake project build
   (projectile-register-project-type 'cmake '("CMakeLists.txt")
@@ -109,23 +104,19 @@
   )
 
 (use-package treemacs-evil
-  :straight t
   :after treemacs evil
   :config
   (evil-define-key 'treemacs treemacs-mode-map (kbd "l") 'treemacs-RET-action)
   (evil-define-key 'treemacs treemacs-mode-map (kbd "h") 'treemacs-TAB-action))
 
 (use-package treemacs-projectile
-  :straight t
   :after treemacs projectile)
 
 (use-package treemacs-magit
-  :straight t
   :after treemacs magit)
 
 ;; lint tool
 (use-package flycheck
-  :straight t
   :diminish " FC"
   :hook
   (prog-mode . flycheck-mode)
@@ -137,7 +128,6 @@
 
 ;; xref
 (use-package ivy-xref
-  :straight t
   :init
   ;; xref initialization is different in Emacs 27 - there are two different
   ;; variables which can be set rather than just one
@@ -148,15 +138,13 @@
   ;; as well
   (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
-(straight-use-package 'toml-mode)
-(straight-use-package 'yaml-mode)
-(straight-use-package 'pkgbuild-mode)
+(use-package toml-mode)
+(use-package yaml-mode)
+(use-package pkgbuild-mode)
 (use-package dhall-mode
-  :straight t
   :mode "\\.dhall\\'")
 
 (use-package rainbow-delimiters
-  :straight t
   :hook
   (emacs-lisp-mode . rainbow-delimiters-mode)
   (haskell-mode    . rainbow-delimiters-mode)

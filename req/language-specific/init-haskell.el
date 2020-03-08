@@ -5,7 +5,6 @@
 
 ;;; Code:
 (use-package haskell-mode
-  :straight t
   :hook
   (haskel-mode . haskell-indentation-mode)
   :init
@@ -46,12 +45,11 @@
     (inhibit-startup-screen                       t))
 
 (use-package lsp-haskell
-  :straight t
   :hook (haskell-mode . lsp)
   :custom
   (lsp-haskell-process-path-hie "hie-wrapper"))
 
-(straight-use-package 'haskell-snippets)
+(use-package haskell-snippets)
 
 (provide 'init-haskell)
 

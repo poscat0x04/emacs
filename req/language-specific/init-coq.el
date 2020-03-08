@@ -1,11 +1,9 @@
 
 ;;; Code:
 
-(use-package proof-general
-  :straight t)
+(use-package proof-general)
 
 (use-package company-coq
-  :straight t
   :ensure nil
   :hook (coq-mode . company-coq-mode)
   :custom

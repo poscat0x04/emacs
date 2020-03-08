@@ -111,8 +111,7 @@
   :hook (after-init . server-mode))
 
 ;; Try out emacs package without installing
-(use-package try
-  :straight t)
+(use-package try)
 
 ;; Browser
 (defun browse-url-chromium-incognito (url &optional new-window)

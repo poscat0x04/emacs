@@ -6,7 +6,6 @@
 ;;; Code:
 
 (use-package evil
-  :straight t
   :diminish evil
   :hook (after-init . evil-mode)
   :config
@@ -20,7 +19,6 @@
          ))
 
 (use-package evil-leader
-  :straight t
   :custom (evil-leader/leader "<SPC>")
   :config
   (global-evil-leader-mode)
@@ -29,16 +27,13 @@
   )
 
 (use-package evil-nerd-commenter
-  :straight t
   :config
   (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines))
 
 (use-package evil-surround
-  :straight t
   :hook (prog-mode . evil-surround-mode))
 
 (use-package evil-magit
-  :straight t
   :after evil magit)
 
 (provide 'init-evil)

@@ -3,7 +3,6 @@
 
 (use-package tex
   :defer t
-  :straight auctex
   :hook
   (LaTeX-mode . visual-line-mode)
   (LaTeX-mode . flycheck-mode)
@@ -26,12 +25,10 @@
                 TeX-engine 'xetex))
 
 (use-package company-auctex
-  :straight t
   :init
   (company-auctex-init))
 
 (use-package auctex-latexmk
-  :straight t
   :init
   (auctex-latexmk-setup)
   :custom

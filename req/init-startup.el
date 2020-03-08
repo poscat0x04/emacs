@@ -40,11 +40,9 @@
   (focus-out-hook . (my/recentf-save-list-silence my/recentf-cleanup-silence)))
 
 (use-package page-break-lines
-  :straight t
   :defer t)
 
 (use-package dashboard
-  :straight t
   :diminish
   (dashboard-mode page-break-lines-mode)
   :custom

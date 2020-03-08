@@ -7,7 +7,6 @@
 
 ;; The completion engine
 (use-package company
-  :straight t
   :diminish company-mode
   :defines (company-dabbrev-downcase company-dabbrev-ignore-case)
   :hook (prog-mode . company-mode)
@@ -31,13 +30,11 @@
 
 ;; Sorting & filtering
 (use-package company-prescient
-  :straight t
   :hook (company-mode . company-prescient-mode)
   :config (prescient-persist-mode +1))
 
 ;; lsp integration
 (use-package company-lsp
-  :straight t
   :after lsp-mode
   :config
   (setq company-transformers nil
@@ -45,7 +42,6 @@
 
 ;; lsp-mode
 (use-package lsp-mode
-  :straight t
   :hook (prog-mode . lsp-deferred)
   :init (setq flymake-fringe-indicator-position 'right-fringe)
   :custom
@@ -66,7 +62,6 @@
 
 ;; lsp-ui
 (use-package lsp-ui
-  :straight t
   :hook (lsp-mode . lsp-ui-mode))
 
 

@@ -7,24 +7,20 @@
 
 ;; Tips for next keystroke
 (use-package which-key
-  :straight t
   :diminish which-key-mode
   :hook (after-init . which-key-mode)
   :custom (which-key-idle-delay 0.5))
 
 ;; The blazing grep tool
 (use-package rg
-  :straight t
   :defer t)
 
 ;; fuzzy search
 (use-package fzf
-  :straight t
   :defer t)
 
 ;; Jump to arbitrary positions
 (use-package avy
-  :straight t
   :custom
   (avy-timeout-seconds 0.2)
   (avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?u ?i ?o ?p))
@@ -40,7 +36,6 @@
 
 ;; ivy core
 (use-package ivy
-  :straight t
   :diminish ivy-mode
   :init (setq ivy-use-virtual-buffers t
               ivy-count-format "%d/%d"
@@ -50,7 +45,6 @@
 
 ;; fuzzy matcher
 (use-package counsel
-  :straight t
   :diminish counsel-mode
   :hook (ivy-mode . counsel-mode)
   :bind (("M-y" . counsel-yank-pop)
@@ -68,7 +62,6 @@
 
 ;; switch windows quickly
 (use-package ace-window
-  :straight t
   :preface
   (defun my/switch-window ()
     (interactive)
@@ -106,7 +99,6 @@
 
 ;; The markdown mode is awesome! unbeatable
 (use-package markdown-mode
-  :straight t
   :custom
   (markdown-command "pandoc")
   (markdown-fontify-code-blocks-natively t)
@@ -114,22 +106,14 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
-;; free hands
-(use-package auto-package-update
-  :straight t
-  :custom
-  (auto-package-update-delete-old-versions t))
-
 ;; beautiful term mode & friends
 (use-package vterm
-  :straight t
   :hook (vterm-mode . (lambda ()
                         (setq-local evil-insert-state-cursor 'box)
                         (evil-insert-state)))
   )
 
 (use-package vterm-toggle
-  :straight t
   :bind (:map global-map
          ("M-=" . vterm-toggle)
          :map vterm-mode-map
@@ -147,23 +131,19 @@
 
 ;; GC optimization
 (use-package gcmh
-  :straight t
   :custom
   (gcmh-high-cons-threshold 100000000)
   (gcmh-idle-delay 300)
   :hook (after-init . gcmh-mode))
 
 ;; required by `comment-edit'
-(use-package dash
-  :straight t)
+(use-package dash)
 
 ;; required by `comment-edit'
-(use-package edit-indirect
-  :straight t)
+(use-package edit-indirect)
 
 ;; write documentation comment with in a easy way
 (use-package comment-edit
-  :straight t
   :straight (:host github :repo "twlz0ne/comment-edit.el")
   :custom
   (comment-edit-default-mode 'markdown-mode)
@@ -173,7 +153,6 @@
 
 ;; pastebin service
 (use-package webpaste
-  :straight t
   :custom
   (webpaste-paste-confirmation t)
   (webpaste-add-to-killring nil)
@@ -186,7 +165,6 @@
   )
 
 ;; Edit text for browser with GhostText or AtomicChrome extension
-(straight-use-package 'atomic-chrome)
 (use-package atomic-chrome
   :hook ((emacs-startup . atomic-chrome-start-server)
          (atomic-chrome-edit-mode . delete-other-windows))
@@ -198,16 +176,8 @@
       (setq atomic-chrome-url-major-mode-alist
             '(("github\\.com" . gfm-mode)))))
 
-;; Auto compile elisp
-(straight-use-package 'auto-compile)
-(use-package auto-compile
-  :custom
-  (auto-compile-on-load-mode)
-  (auto-compile-on-save-mode))
-
 ;; grip-mode
 (use-package grip-mode
-  :straight t
   :hook ((markdown-mode org-mode) . grip-mode)
   :custom
   (grip-preview-use-webkit t))
