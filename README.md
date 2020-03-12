@@ -12,6 +12,7 @@ uses company for autocomplete
 | Idris      | idris-mode         | idris-mode     |
 | Purescript | purescript-mode    | psc-ide-emacs  |
 | LaTeX      | auctex             | company-auctex |
+| ATS        | bundled            | nil            |
 
 ## installation
 
@@ -22,6 +23,7 @@ clone into `~/.emacs.d` open emacs and run `M-x all-the-icons-install-font`
 | Package     | Reason                                    |
 |-------------|-------------------------------------------|
 | gcc, cmake  | compiling libvterm                        |
+| ats2        | syntax checking for ATS                   |
 | hie         | lsp support for Haskell                   |
 | stack       | build tool for Haskell                    |
 | rust        | lsp support and build tool for Rust       |

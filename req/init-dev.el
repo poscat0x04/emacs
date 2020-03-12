@@ -166,6 +166,7 @@
 (require 'init-purs)
 (require 'init-latex)
 (require 'init-nat)
+(require 'init-ats)
 
 (provide 'init-dev)
 
