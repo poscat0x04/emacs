@@ -123,7 +123,10 @@
   (text-mode . flycheck-mode)
   :config
   (setq flycheck-indication-mode 'right-fringe)
-  (setq-default flycheck-disabled-checkers '(c/c++-clang c/c++-cppcheck c/c++-gcc))
+  (setq-default flycheck-disabled-checkers '(c/c++-clang
+                                             c/c++-cppcheck
+                                             c/c++-gcc
+                                             haskell-stack-ghc))
   )
 
 ;; xref
