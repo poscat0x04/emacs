@@ -49,6 +49,9 @@
   :custom
   (lsp-haskell-process-path-hie "hie-wrapper"))
 
+(use-package flycheck-haskell
+  :hook (haskell-mode . flycheck-haskell-setup))
+
 (use-package haskell-snippets)
 
 (provide 'init-haskell)
