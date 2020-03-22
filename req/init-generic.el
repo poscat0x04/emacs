@@ -121,6 +121,9 @@
 
 (setq browse-url-browser-function 'browse-url-chromium-incognito)
 
+;; separate clipboard and kill-ring
+(setq save-interprogram-paste-before-kill nil)
+
 
 (provide 'init-generic)
 
