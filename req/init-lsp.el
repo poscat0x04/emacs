@@ -62,7 +62,9 @@
 
 ;; lsp-ui
 (use-package lsp-ui
-  :hook (lsp-mode . lsp-ui-mode))
+  :hook (lsp-mode . lsp-ui-mode)
+  :config
+  (lsp-ui-flycheck-enable t))
 
 
 (provide 'init-lsp)
