@@ -53,6 +53,7 @@
   (lsp-auto-guess-root t)              ;; auto guess root
   (lsp-keep-workspace-alive nil)       ;; auto kill lsp server
   (lsp-eldoc-enable-hover nil)         ;; Disable eldoc displays in minibuffer
+  (lsp-rust-server 'rust-analyzer)
   :bind (:map lsp-mode-map
               ("C-c f" . lsp-format-region)
               ("C-c d" . lsp-describe-thing-at-point)
