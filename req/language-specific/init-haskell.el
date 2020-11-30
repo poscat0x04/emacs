@@ -47,7 +47,7 @@
 (use-package lsp-haskell
   :hook (haskell-mode . lsp)
   :custom
-  (lsp-haskell-process-path-hie "hie-wrapper"))
+  (lsp-haskell-process-path-hie "haskell-language-server"))
 
 ;(use-package flycheck-haskell
 ;  :hook (haskell-mode . flycheck-haskell-setup))
