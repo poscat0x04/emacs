@@ -161,6 +161,10 @@
   (purescript-mode . rainbow-delimiters-mode)
   (idris-mode      . rainbow-delimiters-mode))
 
+(use-package direnv
+ :config
+ (direnv-mode))
+
 (require 'init-rust)
 (require 'init-haskell)
 (require 'init-agda)
